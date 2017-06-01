@@ -13,7 +13,8 @@ var path = require('path');
 module.exports = function(grunt) {
 
     var gruntJasminePath = path.dirname(require.resolve('grunt-contrib-jasmine'));
-    grunt.loadTasks(path.join(gruntJasminePath, 'tasks'));
+    //grunt.loadTasks(path.join(gruntJasminePath, 'tasks'));
+    grunt.loadTasks(gruntJasminePath);
     var task = grunt.renameTask('jasmine', 'sencha_jasmine_wrapper');
 
     function parseNameArgsIntoFormatForWrapper(nameArgs) {
